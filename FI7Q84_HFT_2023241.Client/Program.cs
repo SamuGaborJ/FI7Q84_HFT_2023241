@@ -6,7 +6,6 @@ namespace FI7Q84_HFT_2023241.Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
         }
     }

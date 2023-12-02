@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FI7Q84_HFT_2023241.Models\FI7Q84_HFT_2023241.Models.csproj" />
+    <ProjectReference Include="..\FI7Q84_HFT_2023241.Repository\FI7Q84_HFT_2023241.Repository.csproj" />
   </ItemGroup>
 
 </Project>

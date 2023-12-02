@@ -19,9 +19,13 @@ namespace FI7Q84_HFT_2023241.Models
 
         public int Length { get; set; }
 
+        [ForeignKey(nameof(Author))]
+        public int AuthorId { get; set; }
+
         [NotMapped]
         public virtual Author Author { get; set; }
 
+        public int AlbumId { get; set; }
         [NotMapped]
         public virtual Album Album { get; set; }
     }

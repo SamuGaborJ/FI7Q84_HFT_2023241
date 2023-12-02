@@ -21,6 +21,7 @@ namespace FI7Q84_HFT_2023241.Models
         [NotMapped]
         public virtual ICollection<Song> Songs { get; set; }
 
+        [NotMapped]
         public virtual ICollection<Album> Albums { get; set; }
         public Author()
         {

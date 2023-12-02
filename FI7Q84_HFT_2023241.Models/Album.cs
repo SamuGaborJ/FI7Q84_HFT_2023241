@@ -15,8 +15,10 @@ namespace FI7Q84_HFT_2023241.Models
 
         public int ReleaseYear { get; set; }
 
-        public int AmountSold { get; set; }
+        public double AmountSold { get; set; }
 
+        [ForeignKey(nameof(Author))]
+        public int AuthorId { get; set; }
         [NotMapped]
         public virtual Author Author { get; set; }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FI7Q84_HFT_2023241.Logic
 {
-    public class SongLogic
+    public class SongLogic : ISongLogic
     {
         ISongRepository songRepository;
         public SongLogic(ISongRepository songRepository)
@@ -49,8 +49,8 @@ namespace FI7Q84_HFT_2023241.Logic
             var eminemSongs = songRepository.ReadAll().Where(song => song.Author.Name == "Eminem");
             return eminemSongs;
         }
-        
-        
+
+
 
     }
 }

@@ -40,7 +40,12 @@ namespace FI7Q84_HFT_2023241.Repository
         public void Update(Author author)
         {
             var oldAuthor = Read(author.Id);
-
+            oldAuthor.Id = author.Id;
+            oldAuthor.Albums=author.Albums;
+            oldAuthor.Age=author.Age;
+            oldAuthor.Songs=author.Songs;
+            oldAuthor.Gender=author.Gender;
+            oldAuthor.Name=author.Name;
             dataBase.SaveChanges();
         }
     }

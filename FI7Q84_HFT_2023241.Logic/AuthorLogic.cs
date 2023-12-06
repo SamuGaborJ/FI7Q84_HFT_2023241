@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FI7Q84_HFT_2023241.Logic
 {
-    public class AuthorLogic
+    public class AuthorLogic : IAuthorLogic
     {
         IAuthorRepository authorRepository;
         public AuthorLogic(IAuthorRepository authorRepository)

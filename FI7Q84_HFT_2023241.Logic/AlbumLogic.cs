@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FI7Q84_HFT_2023241.Logic
 {
-    public class AlbumLogic
+    public class AlbumLogic : IAlbumLogic
     {
         IAlbumRepository albumRepository;
         public AlbumLogic(IAlbumRepository albumRepository)
@@ -46,7 +46,7 @@ namespace FI7Q84_HFT_2023241.Logic
         }
         public IEnumerable<Album> MostSellingAlbum()
         {
-            
+
             var albumWithMostSales = albumRepository.ReadAll().OrderByDescending(album => album.AmountSold).Take(1);
             return albumWithMostSales;
         }

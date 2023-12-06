@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace FI7Q84_HFT_2023241.Models
@@ -20,9 +21,11 @@ namespace FI7Q84_HFT_2023241.Models
         [ForeignKey(nameof(Author))]
         public int AuthorId { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual Author Author { get; set; }
 
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<Song> Songs { get; set; }
         public Album()
         {

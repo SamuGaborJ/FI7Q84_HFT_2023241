@@ -86,7 +86,7 @@ namespace FI7Q84_HFT_2023241.Repository
             Author beyonce = new Author() { Id = 6, Name = "Beyoncé", Age = 40, Gender = "Female" };
             Author edSheeran = new Author() { Id = 7, Name = "Ed Sheeran", Age = 31, Gender = "Male" };
 
-            enter
+            enter1
 
             Album eminemAlbum = new Album() { Id = 1, Name = "The Eminem Show", ReleaseYear = 2002,
                 AmountSold = 27000000, AuthorId=eminem.Id };

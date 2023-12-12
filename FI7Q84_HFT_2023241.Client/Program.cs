@@ -58,8 +58,13 @@ namespace FI7Q84_HFT_2023241.Client
                 .Add("Authors older than 40: ", () => olderThan40())
                 .Add("Male authors: ", () => MaleAuthors())
                 .Add("Album that was released in 2002: ", () => ReleaseYear2002())
-                .Add("Most selling album: ", () => MostSellingAlbum())
-                
+                .Add("Most selling album: ", () => MostSellingAlbum())//
+                .Add("Old Authors Songs: ", () => OldAuthorsAlbum())
+                .Add("Male Authors album: ", () => MaleAuthorsAlbum())
+                .Add("Young author songs: ", () => YoungAuthorSongs())
+                .Add("Female author songs: ", () => FemaleAuthorSongs())
+                .Add("Album released 2000: ", () => AlbumReleaseYear2011())
+
 
                 .Add("Back", ConsoleMenu.Close)
                 .Configure(config =>
@@ -402,6 +407,50 @@ namespace FI7Q84_HFT_2023241.Client
             Console.WriteLine("Authors older than 40: ");
             rs.Get<Author>("stat/q5").ToList()
                 .ForEach(f => Console.WriteLine($"[{f.Id}] Title: {f.Name}"));
+            Console.Write("Press Enter To Continue");
+            Console.ReadLine();
+        }
+
+        private static void OldAuthorsAlbum()
+        {
+            Console.WriteLine("Old authors album: ");
+            rs.Get<Author>("stat/q6").ToList()
+                .ForEach(m => Console.WriteLine($"[{m.Id}] Title: {m.Name}"));
+            Console.Write("Press Enter To Continue");
+            Console.ReadLine();
+        }
+        private static void MaleAuthorsAlbum()
+        {
+            Console.WriteLine("Male authors albums: ");
+            rs.Get<Author>("stat/q7").ToList()
+                .ForEach(m => Console.WriteLine($"[{m.Id}] Title: {m.Name}"));
+            Console.Write("Press Enter To Continue");
+            Console.ReadLine();
+        }
+
+        private static void YoungAuthorSongs()
+        {
+            Console.WriteLine("Young authors Songs: ");
+            rs.Get<Song>("stat/q8").ToList()
+                .ForEach(m => Console.WriteLine($"[{m.Id}] Title: {m.Title}"));
+            Console.Write("Press Enter To Continue");
+            Console.ReadLine();
+        }
+
+        private static void FemaleAuthorSongs()
+        {
+            Console.WriteLine("Female authors Songs: ");
+            rs.Get<Song>("stat/q9").ToList()
+                .ForEach(m => Console.WriteLine($"[{m.Id}] Title: {m.Title}"));
+            Console.Write("Press Enter To Continue");
+            Console.ReadLine();
+        }
+        
+            private static void AlbumReleaseYear2011()
+        {
+            Console.WriteLine("Album release year 2011: ");
+            rs.Get<Song>("stat/q10").ToList()
+                .ForEach(m => Console.WriteLine($"[{m.Id}] Title: {m.Title}"));
             Console.Write("Press Enter To Continue");
             Console.ReadLine();
         }

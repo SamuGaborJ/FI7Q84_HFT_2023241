@@ -55,5 +55,7 @@ namespace FI7Q84_HFT_2023241.Logic
             var males = authorRepository.ReadAll().Where(author => author.Gender == "Male");
             return males;
         }
+        
+        
     }
 }

@@ -12,5 +12,7 @@ namespace FI7Q84_HFT_2023241.Logic
         IEnumerable<Album> ReadAll();
         IEnumerable<Album> ReleaseYear2002();
         void Update(Album album);
+        IEnumerable<Album> OldAuthors();
+        IEnumerable<Album> MaleAuthorsLogic();
     }
 }

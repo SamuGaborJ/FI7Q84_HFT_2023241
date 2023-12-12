@@ -12,5 +12,6 @@ namespace FI7Q84_HFT_2023241.Logic
         Author Read(int id);
         IEnumerable<Author> ReadAll();
         void Update(Author author);
+        
     }
 }

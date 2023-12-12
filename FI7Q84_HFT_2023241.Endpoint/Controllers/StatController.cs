@@ -50,5 +50,26 @@ namespace FI7Q84_HFT_2023241.Endpoint.Controllers
             return authorLogic.olderThan40();
         }
 
+        public IEnumerable<Album> Q6()
+        {
+            return albumLogic.OldAuthors();
+        }
+        public IEnumerable<Album> Q7()
+        {
+            return albumLogic.MaleAuthorsLogic();
+        }
+        public IEnumerable<Song> Q8()
+        {
+            return songLogic.YoungAuthorSongs();
+        }
+        public IEnumerable<Song> Q9()
+        {
+            return songLogic.FemaleAuthorSongs();
+        }
+        public IEnumerable<Song> Q10()
+        {
+            return songLogic.AlbumReleaseYear2011();
+        }
+
     }
 }

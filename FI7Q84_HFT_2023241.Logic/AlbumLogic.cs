@@ -55,5 +55,18 @@ namespace FI7Q84_HFT_2023241.Logic
             var release2002 = albumRepository.ReadAll().Where(album => album.ReleaseYear == 2002);
             return release2002;
         }
+
+        public IEnumerable<Album> OldAuthors()
+        {
+            var oldAuthors = albumRepository.ReadAll().Where(album => album.Author.Age > 40);
+            return oldAuthors;
+        }
+
+        public IEnumerable<Album> MaleAuthorsLogic()
+        {
+            var males = albumRepository.ReadAll().Where(album => album.Author.Gender == "Male");
+            return males;
+        }
+        
     }
 }

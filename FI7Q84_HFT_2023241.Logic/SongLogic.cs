@@ -50,7 +50,22 @@ namespace FI7Q84_HFT_2023241.Logic
             return eminemSongs;
         }
 
+        public IEnumerable<Song> YoungAuthorSongs()
+        {
+            var youngAuthor = songRepository.ReadAll().Where(song => song.Author.Age < 40);
+            return youngAuthor;
+        }
+        public IEnumerable<Song> FemaleAuthorSongs()
+        {
+            var femaleSong = songRepository.ReadAll().Where(song => song.Author.Gender == "Female");
+            return femaleSong;
+        }
 
+        public IEnumerable<Song> AlbumReleaseYear2011()
+        {
+            var albumRelease = songRepository.ReadAll().Where(song => song.Album.ReleaseYear < 2011);
+            return albumRelease;
+        }
 
     }
 }
